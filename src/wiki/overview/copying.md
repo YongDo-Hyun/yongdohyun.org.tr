@@ -4,7 +4,7 @@ eleventyNavigation:
   parent: Overview
   order: 5
 ---
-## ProjT Launcher
+# ProjT Launcher
 
      ProjT Launcher - Minecraft Launcher
      Copyright (C) 2025 ProjT Launcher Contributors

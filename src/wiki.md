@@ -6,4 +6,6 @@ eleventyNavigation:
 permalink: false
 ---
 
+# Wiki
+
 Redirecting to wiki overview
