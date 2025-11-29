@@ -1,0 +1,47 @@
+<header class="site-hero">
+  <div class="bg hero-pattern" aria-hidden="true"></div>
+  <nav class="container hero-nav">
+    <a class="brand home" href="{{ '/' | url }}" aria-label="YongDo-Hyun">
+      <div class="brand-copy">
+        <span>YongDo-Hyun</span>
+        <small>Software Developer</small>
+      </div>
+    </a>
+    <ul class="main-menu">
+      {%- for entry in collections.nav | eleventyNavigation %}
+      <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
+        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="links">
+      <div class="social-links">
+        <a href="https://github.com/YongDo-Hyun" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a>
+        <a href="mailto:froster12@naver.com" target="_blank" aria-label="Email"><i class="fa fa-envelope-square"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  {% if hero %}
+  <div class="hero-body container">
+    <div class="hero-description">
+      <p class="eyebrow">Personal Portfolio</p>
+      <h1 class="hero-title">{{ hero.title }}</h1>
+      <p class="subtitle">{{ hero.description }}</p>
+      <div class="hero-actions">
+        {%- if hero.button %}
+        <a class="button size-large" href="{{ hero.button.url | url }}">{{ hero.button.content }}</a>
+        {%- endif %}
+        <a class="button ghost-button size-large" href="https://github.com/YongDo-Hyun" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+    {%- if hero.image %}
+    <div class="hero-media">
+      <div class="hero-media-frame">
+        <img src="{{ hero.image.light }}" alt="{{ hero.title }}">
+      </div>
+    </div>
+    {%- endif %}
+  </div>
+  {% endif %}
+</header>

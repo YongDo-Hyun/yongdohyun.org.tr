@@ -1,0 +1,13 @@
+---
+layout: layouts/main.njk
+tags: nav
+eleventyNavigation:
+  key: Blog
+  order: 2
+hero:
+  title: 'Personal Blog'
+  description: 'My thoughts, updates, and musings on software development, open source, and more.'
+---
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
